@@ -5,9 +5,11 @@ import {
   Text,
   View,
 } from "react-native";
+
 import * as Location from "expo-location";
 import { useState } from "react";
 import * as TaskManager from "expo-task-manager";
+import { hello } from "./modules/my-module";
 
 export default function App() {
   const LOCATION_TASK_NAME = "background-location-task";
@@ -74,7 +76,9 @@ export default function App() {
     await Location.startGeofencingAsync(GEOFENCING_TASK_NAME, [geofenceRegion]);
   };
   return (
-    <View>
+    <View style={{ margin: 23 }}>
+      <Text>Silent Me</Text>
+      <hello />
       <Button title="Click Me" onPress={getPermission} />
     </View>
   );
