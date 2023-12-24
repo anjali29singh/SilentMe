@@ -78,7 +78,7 @@ export default function App() {
   return (
     <View style={{ margin: 23 }}>
       <Text>Silent Me</Text>
-      <hello />
+      <Text>{hello()}</Text>
       <Button title="Click Me" onPress={getPermission} />
     </View>
   );
